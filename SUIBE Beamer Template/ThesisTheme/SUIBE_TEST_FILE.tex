@@ -1,0 +1,28 @@
+%!TEX program = xelatex
+\documentclass[
+aspectratio=169,	% Comment for 4:3 aspect ratio
+LETI,				% Use this option to select your DEE degree, options: LEEC, LETI
+english,			% Select document language, options: portuguese, english
+%handout			% Uncomment to make the PDF WITHOUT overlays, e.g., for PDF submission before the presentation
+]{DEEclassP}
+
+% Use the 'preamble.tex' file (root folder) do add packages and macros. Keep your main.tex file clean.
+\input{preamble}
+
+\title[法學作为科學之無價值性]{\textit{Die Werthlosigkeit der Jurisprudenz als Wissenschaft:
+\\ein Vortrag gehalten in der Juristischen Gesellschaft zu
+Berlin}}
+\subtitle{法學作为科學之無價值性\footfullcite{kirchmann1848werthlosigkeit}}
+\author[Deinen Namen]{Deinen Namen}	% Your name
+\studentnumber{1234567}									% Your student number
+%\predate{1 de junho de 2024} 					% Presentation date, comment this line for automatic date (today)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+%\begin{frame}[noframenumbering,plain]
+	\maketitlepage
+%\end{frame}
+\include{chapters/NotasPreliminares}
+
+\end{document}

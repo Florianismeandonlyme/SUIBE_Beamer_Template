@@ -1,0 +1,452 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% Template for DEE@ISEP Presentations, for LEEC, LETI and MEEC
+% developed by Vitor M. R. Cunha - v1.0, Mar 2024
+% Suggestions and comments are welcomed (vrc at isep dot ipp dot pt).
+%
+% Template provided as is, NO SUPPORT will be given.
+% NO questions related to Beamer (or LaTeX) will be answered, go to
+% https://tug.ctan.org/macros/latex/contrib/beamer/doc/beameruserguide.pdf, or search the web.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CLASS SETTINGS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[
+aspectratio=169,	% Comment for 4:3 aspect ratio
+LETI,				% Use this option to select your DEE degree, options: LEEC, LETI
+english,			% Select document language, options: portuguese, english
+%handout			% Uncomment to make the PDF WITHOUT overlays, e.g., for PDF submission before the presentation
+]{DEEclassP}
+
+% Use the 'preamble.tex' file (root folder) do add packages and macros. Keep your main.tex file clean.
+\input{preamble}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% PRESENTATION INFORMATION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title[法學作为科學之無價值性]{\textit{法學作为科學之無價值性}}
+\subtitle{\textit{Die Werthlosigkeit der Jurisprudenz als Wissenschaft}\footfullcite{kirchmann1848werthlosigkeit}}
+\author[Deinen Namen]{Deinen Namen}	% Your name
+\studentnumber{1234567}									% Your student number
+%\predate{1 de junho de 2024} 					% Presentation date, comment this line for automatic date (today)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+%\begin{frame}[noframenumbering,plain]
+	\maketitlepage
+%\end{frame}
+
+\begin{frame}{Sumário}
+	\tableofcontents
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% MAKE YOUR SLIDES AFTER THIS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\makesection
+\section{Notas Preliminares}
+
+\begin{frame}{Notas Preliminares (I)}
+
+\setlstep{0.3cm}{0cm}{0cm}	% To easily ADD vertical spacing (to standard spacing) between list items.
+							% \setlstep{1st depth level}{2nd}{3rd}
+\begin{itemize}
+	\item Considere que só dispõe de \textcolor{red}{10~minutos} para realizar a apresentação.
+	\item Como regra fundamental deverá considerar 1~min por cada slide.
+	\begin{itemize}
+		\item Assim, não deve preparar mais do que 10 slides.
+	\end{itemize}
+	\item Não deve usar muito texto nos slides.
+	\begin{itemize}
+		\item Procure adaptar o texto do relatório às necessidades, necessariamente distintas, da sua apresentação.
+	\end{itemize}	
+	\item Deve usar imagens, gráficos e esquemas.
+	\begin{itemize}
+		\item Reutilize os que produziu para o relatório.
+	\end{itemize}	
+	\item Deve praticar a sua apresentação de forma a garantir que irá transmitir o que pretende.
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{Notas Preliminares (II)}
+% Use the 'fragile' option when your slide has \verb or a listing
+
+\setlstep{0.3cm}{0cm}{0cm}
+\begin{itemize}
+	\item A secção \textbf{Sumário} é obrigatória.
+	\begin{itemize}
+		\item Use os comandos \verb|\section{}| e \verb|\subsection{}| para automaticamente adicionar conteúdo ao Sumário.
+		\item No inicio da apresentação deverá oralmente descrever as secções mencionadas no Sumário.
+	\end{itemize}	
+	\item Também é obrigatória a secção \textbf{Conclusões}.
+	\item Se o desejar pode acompanhar a sua apresentação com uma pequena demonstração. 
+	\begin{itemize}
+		\item Os 10 min de que dispõe podem ser usados ao seu critério, pondere sobre a forma e meios de transmitir a sua mensagem.
+	\end{itemize}
+	\item Deve procurar ser claro e conciso na sua exposição oral e escrita.
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Como Usar o \textit{Template}}
+%\subsection{Subsection name}
+
+\begin{frame}[fragile]{Como usar o \textit{template}}
+
+\setlstep{0.3cm}{0cm}{0cm}
+\begin{enumerate}
+	\item Configuração inicial, no ficheiro \verb|main.tex|: 
+	\begin{itemize}
+		\item secção \verb|CLASS SETTINGS|: selecionar o formato dos slides, o curso DEE e o idioma.
+		\item secção \verb|PRESENTATION INFORMATION|: introduzir o título da apresentação, nome e número do candidato e a data da apresentação.
+	\end{itemize}	
+	\item Crie os slides (\textit{frames}) após a secção \verb|MAKE YOUR SLIDES AFTER THIS|.
+	\item Coloque os ficheiros de imagens no diretório \verb|figures|.
+	\item Analise o código deste ficheiro (\verb|main.tex|) onde vai encontrar exemplos e dicas.
+\end{enumerate}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{A Classe Beamer}
+
+\begin{frame}{A classe Beamer}
+
+\setlstep{0.5cm}{0cm}{0cm}
+\begin{itemize}
+	\item Uma apresentação Beamer é criada como qualquer outro documento \LaTeX{}. Beamer é uma classe de \LaTeX{} para criar apresentações que são realizadas usando um projetor.
+	\begin{itemize}
+		\item O resultado é um ficheiro PDF.
+		\item Para a apresentação usa-se um qualquer leitor de PDFs em modo de `página única' e `ecrã completo'.
+	\end{itemize}	
+	\item Apontadores Beamer:
+	\begin{itemize}
+		\item \url{https://tug.ctan.org/macros/latex/contrib/beamer/doc/beameruserguide.pdf}
+		\item \url{https://www.overleaf.com/learn/latex/Beamer}
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Slides Exemplo}
+
+\begin{frame}{Listas}
+\framesubtitle{Subtítulo se necessário}
+
+\begin{columns}
+\column{0.33\textwidth}
+
+Lista simples:
+\begin{itemize}
+	\item Item 11
+    \begin{itemize}
+    	\item Item 21
+  	    \item Item 22
+  	\end{itemize}
+  	\item Item 12
+\end{itemize}  	    
+
+\column{0.33\textwidth}
+Lista numerada:
+\begin{enumerate}
+	\item Item 1
+    \item Item 2
+  	\item Item 3
+\end{enumerate} 
+
+\column{0.33\textwidth}
+Lista descritiva:
+\begin{description}
+	\item [Opção 1:] Item 1
+	\item [Opção 2:] Item 2
+	\item [Opção 3:] Item 3
+\end{description}
+	
+\end{columns}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Tabelas (I)}
+
+  
+\begin{table}[h]							 
+	\centering\label{tab1}
+        \caption{Exemplo de uma tabela simples 	} 
+	\begin{tabular}{ccccc}
+	\toprule
+	\textbf{coluna 1} & \textbf{coluna 2} & \textbf{coluna 3}\\
+	\midrule
+		célula 11 & célula 12 & célula 13\\ 
+    	célula 21 & célula 22 & célula 23\\  
+    	célula 31 & célula 32 & célula 33\\  
+	\bottomrule
+	\end{tabular}
+\end{table}
+\end{frame}
+
+\begin{frame}{Tablelas (II)}
+\vspace{0.2cm}
+\setlength\tabcolsep{3pt} % default value: 6pt
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{} l lr *{13}{R} @{}}
+\toprule
+&\multicolumn{2}{c}{Settings} & \text{perfect}
+&\multicolumn{4}{c}{10\% values} &\multicolumn{4}{c}{30\% values} 
+&\multicolumn{4}{c@{}}{50\% values} \\
+\cmidrule{2-3} \cmidrule(lr){5-8} \cmidrule(lr){9-12} \cmidrule(l){13-16}
+Model & $\beta$ & & & \mc{s1} & \mc{s2} & \mc{s3} & \mc{s4} 
+                    & \mc{s1} & \mc{s2} & \mc{s3} & \mc{s4} 
+                    & \mc{s1} & \mc{s2} & \mc{s3} & \mc{s4}\\
+\midrule
+Bias\\ % no need for "\multicolumn{13}{l}{Bias}" ...
+&    0  & 336  & -0.006 &
+   0.005 & 0.005  & 0.005  & 0.011  & -0.006 & -0.006 & -0.006 & 0.000  & 0.008  & 0.003  & 0.004  & 0.011 \\
+&    0.5&  336 & -0.004 &
+   0.004 & -0.007 & 0.003  & 0.012  & 0.001  & -0.031 & 0.001  & -0.005 & 0.010  & -0.046 & 0.011  & -0.007 \\
+&    1   &  84 & 0.012  &
+  -0.004 & -0.024 & -0.003 & 0.005  & 0.021  & -0.046 & 0.019  &  0.004 & 0.038  & -0.071 & 0.035  & -0.071 \\
+\addlinespace
+MSE\\
+&    0  &  336 & 0.026 &
+   0.028  & 0.027  & 0.028  & 0.03  & 0.040  & 0.037  & 0.041  & 0.035 & 0.052  & 0.044  & 0.052  & 0.053 \\
+&    0.5&  336 & 0.023 &
+    0.026  & 0.025  & 0.026  & 0.028 & 0.034  & 0.032  & 0.035  & 0.034 & 0.048  & 0.042  & 0.046  & 0.051 \\
+&    1  & 84   & 0.103 &
+   0.098  & 0.095  & 0.098  & 0.114 & 0.142  & 0.125  & 0.142  & 0.156 & 0.195  & 0.161  & 0.194  & 0.200 \\
+\addlinespace
+Coverage\\
+&    0  &  336 & 95.2  &
+   94.9  & 94.9   & 94.7   & 93.4  & 93.8  & 94.4   & 92.6   & 92.7 & 94.6  & 95.8   & 94.3   & 90.2 \\
+&    0.5&  336 & 95.5  &
+   95.4  & 95.9   & 94.9   & 93.7 & 94.4  & 94.9   & 94.8   & 92.8 & 95.2  & 95.6   & 95.1   & 88.6 \\
+&    1  &   84 & 94.5  &
+   96.6  & 96.8   & 96.3   & 94.8 & 96.0  & 95.7   & 95.4   & 92.7 & 96.2  & 96.7   & 96.6   & 92.2 \\
+\bottomrule
+\end{tabular}}
+\begin{table}\label{tab2}
+\caption{Exemplo de uma tabela larch}
+\end{table}
+\end{frame}
+	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Caixas de Texto}
+\footnotesize
+\begin{block}{Caixa tipo 1}
+Não esquecer que também pode usar referências, e.g.,\footfullcite{larenz1996} .
+\end{block}
+
+\begin{alertblock}{Caixa tipo 2}
+Por exemplo, uma lista:
+\begin{enumerate}
+    \item Item 1 
+    \item Item 2 
+\end{enumerate} 
+\end{alertblock}
+
+\begin{examples}
+Esta caixa tem um nome pré-definido\footcite{suli2001}. 
+\end{examples}
+
+\begin{theorem}
+    falsa demonstratio Regel\footfullcite{ZFLT202201012}
+\end{theorem}
+    
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Equações}
+  	
+\begin{itemize}
+	\item Equações alinhadas e numeradas:
+	\begin{align}
+		\frac{dx_1}{dt} &= f_1\left(x_1,x_2\right)\\
+		\frac{dx_2}{dt} &= f_2\left(x_1,x_2\right)
+	\end{align}
+	\vspace{0.3cm}
+	\item  Equação (não numerada, em modo \textit{display}): 	
+	$$e = m \cdot c^2$$
+\end{itemize}  	    
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{Código}
+
+\begin{center}
+\begin{minipage}{0.85\textwidth}
+\begin{block}{\small{Exemplo de uma listagem}}
+\begin{lstlisting}[language=Python]
+for number in range(1,11):    # Loop from 1 to 10
+    if number % 2 == 0:       # Check if the number is even
+        print(f"{number} *")  # Print even numbers
+    else:
+        print(number)         # Print odd numbers
+\end{lstlisting}
+\end{block}
+\end{minipage}
+\end{center}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}%[plain]
+\frametitle{Figura Grande}
+
+\begin{figure}[h]						
+	\centering							
+	\includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio]{figures/sample.png}
+\end{figure}
+
+% Link to an extermnal video file in the PC. The default video player will start with the video.
+%\begin{itemize}
+%	\item Vídeo externo 	
+%\end{itemize}
+%\movie[externalviewer]{\includegraphics[scale=0.3]{videothumb.png}}{video_sample.mp4}
+
+% Link to an extermnal video in Youtube. Opens a brower in the video link. Can be used to open any external resource.
+%\begin{figure}[h]						
+%	\centering							
+%	\href{https://youtu.be/LZCEzHhl0Jc?si=KSKEW3uwAEos4rMa}{\includegraphics[scale=0.3]{sample.png}}
+%\end{figure}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{\textit{Overlays} (I)}
+
+Comando \verb|\pause| numa lista:
+\begin{itemize}
+	\pause
+	\item Item 1
+	\pause
+	\item Item 2
+	\pause
+  	\item Item 3
+\end{itemize} 
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{\textit{Overlays} (II)}	
+
+Alternativamente, usando \textit{overlay specifications} onde se especifica o(s) slide(s) em que um elemento é visível:
+\begin{itemize}
+	\item<4-> Item 1
+	\item<3-> \textcolor<5>{red}{Item 2}
+  	\item<2> Item 3
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{\textit{Overlays} (III)}	
+
+\begin{itemize}
+	\item Existem comandos específicos para definir a visibilidade de elementos:
+	\begin{itemize}
+		\item \verb|\onslide|, \verb|\visible|, \verb|\invisible|, \verb|\only| e \verb|\alt|.
+	\end{itemize}
+	\item As \textit{overlay specifications} podem ser aplicadas em diversas situações definidas pela classe Beamer. Assim é possível, por exemplo, sobrepor figuras:
+\end{itemize}
+
+\begin{figure}[h]						
+	\centering							
+	\includegraphics<1|handout:0>[scale=0.6]{imgoverlay1.pdf}%
+	\includegraphics<2>[scale=0.6]{imgoverlay2.pdf}%
+\end{figure}
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Colunas}
+
+\setlstep{0.3cm}{0cm}{0cm}
+\begin{columns}
+\column{0.5\textwidth}
+  	\begin{itemize}
+  	  	\item Slide exemplo com duas colunas (cada uma com 50\% da largura do slide).
+  		\item A soma das larguras das colunas deverá ser sempre 100\% para manter o alinhamento do conteúdo de todos os slides.
+  		\begin{itemize}
+  			\item Se necessário, usar colunas vazias.
+  		\end{itemize}
+  		\item Podem ser usados todos os tipos de ambientes dentro de uma coluna: lista, figura, tabela, caixa, $\ldots$
+	\end{itemize}
+ 
+\column{0.5\textwidth}
+\begin{figure}[h]						
+	\centering							
+	%\includegraphics[scale=0.5]{sample.png}
+	\includegraphics[width=0.8\textwidth]{sample.png}
+\end{figure}
+\end{columns}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{A Apresentação}
+\begin{frame}[fragile]{Considerações para o dia da apresentação}
+
+\setlstep{0.3cm}{0cm}{0cm}
+\begin{itemize}
+	\item Estar presente com a antecedência necessária para preparar a apresentação.
+	\item Abrir o PDF da apresentação com o Adobe Acrobat Reader, Foxit Reader, entre outros.
+	\begin{itemize}
+		\item Evitar usar leitores de PDFs de \textit{browsers}.
+	\end{itemize} 
+	\item Colocar em modo de ecrã inteiro, e.g.:
+	\begin{itemize}
+		\item Adobe Acrobat Reader: \verb|CTRL + L|
+		\item Foxit Reader: \verb|F11|
+	\end{itemize}	
+	\item Deve ter consigo uma cópia do relatório para a fase de discussão.
+\end{itemize}
+	
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Conclusões}
+
+\begin{frame}{Conclusões}
+
+\setlstep{0.5cm}{0cm}{0cm}
+\begin{itemize}
+	\item Esta secção é obrigatória e destina-se à síntese das principais conclusões.
+
+	\item Quais são as consequências e a relevância do trabalho realizado.
+
+	\item Perspetive futuros desenvolvimentos. 
+\end{itemize}
+	
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{~}
+  \transboxin	% Slide transition effect, there are several options. Check Beamer user guide.
+				% Different PDF viewers have different interpretations of these commands, always test beforehand
+  \centering
+  \Large %\textit{通过教义法学，超越教义法学}\\~
+  
+  %\textit{Durch d.Rechtsdogmatik, über d.Rechtsdogmatik hinaus. }\\~
+
+\textit{\textbf{Danke für ihren Aufmerksamkeit!}}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Print the bibliographic references, comment this frame if not needed
+
+%\begin{frame}[t]
+
+    %\printbibliography
+
+
+%\begin{columns}
+%column{0.33\textwidth}
+    %\makereferencesframegerman{sampleRefs}% Use the .bib from your report
+%\column{0.33\textwidth}
+%\end{columns}
+%\begin{frame}[t,allowframebreaks]		% Use this line and comment previous if references list takes more than one slide
+		
+%\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
